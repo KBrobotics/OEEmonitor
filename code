@@ -1,0 +1,641 @@
+[
+    {
+        "id": "93972959b7cce8d0",
+        "type": "tab",
+        "label": "OEE_Alu",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "0e38faf341e1c0cf",
+        "type": "Read-DI",
+        "z": "93972959b7cce8d0",
+        "name": "",
+        "x": 420,
+        "y": 180,
+        "wires": [
+            [
+                "d0e2298caa62175c"
+            ],
+            [
+                "90d49839258e9264"
+            ],
+            [
+                "70af6be2462a5dd2"
+            ],
+            [
+                "11eeb1487cfad1bc"
+            ],
+            [],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "b06aa40b1fbe422d",
+        "type": "Set-DO2",
+        "z": "93972959b7cce8d0",
+        "name": "",
+        "x": 700,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9054e48058f11fd0",
+        "type": "Set-DO3",
+        "z": "93972959b7cce8d0",
+        "name": "",
+        "x": 720,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4f171248fd97360c",
+        "type": "Set-DO4",
+        "z": "93972959b7cce8d0",
+        "name": "",
+        "x": 720,
+        "y": 940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "585268b46311905f",
+        "type": "inject",
+        "z": "93972959b7cce8d0",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "0.2",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 180,
+        "wires": [
+            [
+                "0e38faf341e1c0cf"
+            ]
+        ]
+    },
+    {
+        "id": "d0e2298caa62175c",
+        "type": "switch",
+        "z": "93972959b7cce8d0",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 130,
+        "y": 540,
+        "wires": [
+            [
+                "f846fe4ff80ab2d8",
+                "ced76ec2437625ba",
+                "cf2eb986d7541889",
+                "56b2fe42eafae4a4",
+                "023a62858631ee95",
+                "2ed3d24414eecf07"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "90d49839258e9264",
+        "type": "switch",
+        "z": "93972959b7cce8d0",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 130,
+        "y": 580,
+        "wires": [
+            [
+                "450642bf3f1c5b30",
+                "b06aa40b1fbe422d",
+                "cf2eb986d7541889",
+                "56b2fe42eafae4a4",
+                "ae856fd56ae5f42f",
+                "63f6a445337302c8"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "70af6be2462a5dd2",
+        "type": "switch",
+        "z": "93972959b7cce8d0",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 130,
+        "y": 620,
+        "wires": [
+            [
+                "450642bf3f1c5b30",
+                "9054e48058f11fd0",
+                "ced76ec2437625ba",
+                "56b2fe42eafae4a4",
+                "57cd5580893c2484",
+                "a4540da3d9a7e968"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "11eeb1487cfad1bc",
+        "type": "switch",
+        "z": "93972959b7cce8d0",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 130,
+        "y": 660,
+        "wires": [
+            [
+                "450642bf3f1c5b30",
+                "4f171248fd97360c",
+                "ced76ec2437625ba",
+                "cf2eb986d7541889",
+                "3813581fc74ff219",
+                "74153a6458909f9d"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "f846fe4ff80ab2d8",
+        "type": "Set-DO1",
+        "z": "93972959b7cce8d0",
+        "name": "",
+        "x": 800,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "450642bf3f1c5b30",
+        "type": "change",
+        "z": "93972959b7cce8d0",
+        "name": "NOR",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 530,
+        "y": 560,
+        "wires": [
+            [
+                "f846fe4ff80ab2d8",
+                "023a62858631ee95",
+                "2ed3d24414eecf07"
+            ]
+        ]
+    },
+    {
+        "id": "ced76ec2437625ba",
+        "type": "change",
+        "z": "93972959b7cce8d0",
+        "name": "NOR",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 680,
+        "wires": [
+            [
+                "b06aa40b1fbe422d",
+                "63f6a445337302c8",
+                "ae856fd56ae5f42f"
+            ]
+        ]
+    },
+    {
+        "id": "cf2eb986d7541889",
+        "type": "change",
+        "z": "93972959b7cce8d0",
+        "name": "NOR",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 800,
+        "wires": [
+            [
+                "9054e48058f11fd0",
+                "a4540da3d9a7e968",
+                "57cd5580893c2484"
+            ]
+        ]
+    },
+    {
+        "id": "56b2fe42eafae4a4",
+        "type": "change",
+        "z": "93972959b7cce8d0",
+        "name": "NOR",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 530,
+        "y": 940,
+        "wires": [
+            [
+                "4f171248fd97360c",
+                "74153a6458909f9d",
+                "3813581fc74ff219"
+            ]
+        ]
+    },
+    {
+        "id": "023a62858631ee95",
+        "type": "trigger",
+        "z": "93972959b7cce8d0",
+        "name": "",
+        "op1": "",
+        "op2": "1",
+        "op1type": "num",
+        "op2type": "num",
+        "duration": "-1",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "false",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1030,
+        "y": 280,
+        "wires": [
+            [
+                "4c0b373d683c0726"
+            ]
+        ]
+    },
+    {
+        "id": "2ed3d24414eecf07",
+        "type": "trigger",
+        "z": "93972959b7cce8d0",
+        "name": "",
+        "op1": "0",
+        "op2": "1",
+        "op1type": "num",
+        "op2type": "num",
+        "duration": "-1",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "true",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1030,
+        "y": 400,
+        "wires": [
+            [
+                "4c0b373d683c0726"
+            ]
+        ]
+    },
+    {
+        "id": "4c0b373d683c0726",
+        "type": "influxdb out",
+        "z": "93972959b7cce8d0",
+        "influxdb": "56d533a0958f36c9",
+        "name": "OEEon",
+        "measurement": "OEEon",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "CynkowniaPiec4",
+        "x": 1260,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "ae856fd56ae5f42f",
+        "type": "trigger",
+        "z": "93972959b7cce8d0",
+        "name": "",
+        "op1": "",
+        "op2": "1",
+        "op1type": "num",
+        "op2type": "num",
+        "duration": "-1",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "false",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1030,
+        "y": 580,
+        "wires": [
+            [
+                "15ca3f7515ad3470"
+            ]
+        ]
+    },
+    {
+        "id": "63f6a445337302c8",
+        "type": "trigger",
+        "z": "93972959b7cce8d0",
+        "name": "",
+        "op1": "0",
+        "op2": "1",
+        "op1type": "num",
+        "op2type": "num",
+        "duration": "-1",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "true",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1070,
+        "y": 680,
+        "wires": [
+            [
+                "15ca3f7515ad3470"
+            ]
+        ]
+    },
+    {
+        "id": "15ca3f7515ad3470",
+        "type": "influxdb out",
+        "z": "93972959b7cce8d0",
+        "influxdb": "56d533a0958f36c9",
+        "name": "OEEoff",
+        "measurement": "OEEoff",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "CynkowniaPiec4",
+        "x": 1260,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "57cd5580893c2484",
+        "type": "trigger",
+        "z": "93972959b7cce8d0",
+        "name": "",
+        "op1": "",
+        "op2": "1",
+        "op1type": "num",
+        "op2type": "num",
+        "duration": "-1",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "false",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1070,
+        "y": 780,
+        "wires": [
+            [
+                "e286d32cb231ffd8"
+            ]
+        ]
+    },
+    {
+        "id": "a4540da3d9a7e968",
+        "type": "trigger",
+        "z": "93972959b7cce8d0",
+        "name": "",
+        "op1": "0",
+        "op2": "1",
+        "op1type": "num",
+        "op2type": "num",
+        "duration": "-1",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "true",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1070,
+        "y": 900,
+        "wires": [
+            [
+                "e286d32cb231ffd8"
+            ]
+        ]
+    },
+    {
+        "id": "e286d32cb231ffd8",
+        "type": "influxdb out",
+        "z": "93972959b7cce8d0",
+        "influxdb": "56d533a0958f36c9",
+        "name": "OEEchangeover",
+        "measurement": "OEEchangeover",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "CynkowniaPiec4",
+        "x": 1320,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "3813581fc74ff219",
+        "type": "trigger",
+        "z": "93972959b7cce8d0",
+        "name": "",
+        "op1": "",
+        "op2": "1",
+        "op1type": "num",
+        "op2type": "num",
+        "duration": "-1",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "false",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1050,
+        "y": 1060,
+        "wires": [
+            [
+                "3578b930ec1b130c"
+            ]
+        ]
+    },
+    {
+        "id": "74153a6458909f9d",
+        "type": "trigger",
+        "z": "93972959b7cce8d0",
+        "name": "",
+        "op1": "0",
+        "op2": "1",
+        "op1type": "num",
+        "op2type": "num",
+        "duration": "-1",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "true",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1050,
+        "y": 1180,
+        "wires": [
+            [
+                "3578b930ec1b130c"
+            ]
+        ]
+    },
+    {
+        "id": "3578b930ec1b130c",
+        "type": "influxdb out",
+        "z": "93972959b7cce8d0",
+        "influxdb": "56d533a0958f36c9",
+        "name": "OEEfault",
+        "measurement": "OEEfault",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "CynkowniaPiec4",
+        "x": 1280,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "56d533a0958f36c9",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": "8086",
+        "protocol": "http",
+        "database": "database",
+        "name": "",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "2.0",
+        "url": "https://eu-central-1-1.aws.cloud2.influxdata.com/",
+        "timeout": "10",
+        "rejectUnauthorized": true
+    }
+]
